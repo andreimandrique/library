@@ -9,13 +9,16 @@
     --neutral:#bfdbfe;
     --white: white;
 }
+
+/* Dialog */
+
 ::backdrop {
-    background-color: var(--neutral);
-    opacity: 0.75;
+    background-color: var(--white);
+    opacity: .75;
 }
 dialog {
     color: var(--secondary);
-    border: 6px solid var(--primary);
+    border: 3px solid var(--primary);
     border-radius: 8px;
     top: 50%;
     left: 50%;
@@ -25,7 +28,7 @@ dialog {
     border: var(--primary);
     padding: 3em;
 }
-input[type=text]{
+input[type=text], input[type=number]{
     background-color: var(--neutral);
     border: 0;
     outline: 0;
@@ -61,4 +64,37 @@ input[type=checkbox]{
 .btn:hover{
     background-color: #172554;
     cursor: pointer;
+}
+
+/* Book Container */
+
+.center{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.center > button{
+    border: 0;
+    border-radius: 8px;
+    padding: .8rem 2rem .8rem 2rem;
+    color: var(--white);
+    background-color: var(--primary);
+}
+.center > button:hover{
+    background-color: #172554;
+    cursor: pointer;
+}
+#book-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+.book-design{
+    color: var(--secondary);
+    border: 3px solid var(--primary);
+    border-radius: 8px;
+    width: 150px;
+    min-height: 40vh;
 }
