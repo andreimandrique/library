@@ -44,9 +44,14 @@ function Book(bookName, bookAuthor, bookPage, bookRead) {
 }
 
 //make 3 object
-const book1 = new Book("The Alchemist", "Paulo Coelho", "154", true);
-const book2 = new Book("One Piece", "Oda", 1564, false);
-const book3 = new Book("Bible", "unknown", 4003, false);
+const book1 = new Book(
+  "Lord of the Mysteries",
+  "Cuttlefish That Loves Diving",
+  "1430",
+  true
+);
+const book2 = new Book("The Rain in España", "Gwy Saludes", 40, false);
+const book3 = new Book("The Alchemist", "Paulo Coelho", 208, true);
 
 //make an empty array 
 const myLibrary = [];
@@ -96,7 +101,6 @@ function displayAllBook(){
 
   //loop all item in myLibrary array
   for (let i = 0; i <= myLibrary.length - 1; i++) {
-
     //make all element in the book container
     const bookCard = document.createElement("div");
     const bookNameHeader = document.createElement("h3");
@@ -104,7 +108,10 @@ function displayAllBook(){
     const bookPageParagraph = document.createElement("p");
     const closeButtonCard = document.createElement("img");
     const readButton = document.createElement("button");
-    
+
+    //close button svg in book card
+    closeButtonCard.src = "./svg/close.svg";
+
     //add design to all element in the book container
     bookCard.classList.add("book-design");
     bookNameHeader.classList.add("book-name");
@@ -112,9 +119,6 @@ function displayAllBook(){
     bookPageParagraph.classList.add("info-p");
     readButton.classList.add("read-button");
     closeButtonCard.classList.add("close-button-card");
-
-    //close button svg in book card
-    closeButtonCard.src = "./svg/close.svg";
 
     //display the text in the element
     bookNameHeader.innerText = myLibrary[i]["bookName"];
@@ -140,23 +144,20 @@ function displayAllBook(){
       bookCard.remove();
     });
 
-    //read button 
-    readButton.addEventListener("click", ()=>{
-      //toggle the Read and change it 
-      if(myLibrary[i]["bookRead"] == true){
+    //read button
+    readButton.addEventListener("click", () => {
+      //toggle the Read and change it
+      if (myLibrary[i]["bookRead"] == true) {
         //change the object properties
         myLibrary[i]["bookRead"] = false;
         //change the text
         readButton.innerText = `Read: ${myLibrary[i]["bookRead"]}`;
-      }
-      else{
+      } else {
         //change the object properties
         myLibrary[i]["bookRead"] = true;
         //change the text
         readButton.innerText = `Read: ${myLibrary[i]["bookRead"]}`;
       }
-    })
-
-    
+    });
   }
 }
