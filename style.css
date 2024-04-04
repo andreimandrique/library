@@ -8,6 +8,7 @@
     --secondary: #172554;
     --neutral:#bfdbfe;
     --white: white;
+    --red:#ef4444;
 }
 
 /* Dialog */
@@ -91,10 +92,45 @@ input[type=checkbox]{
     justify-content: center;
     gap: 3rem;
 }
+
+/* Book Design */
+
 .book-design{
+    overflow: hidden;
+    position: relative;
     color: var(--secondary);
     border: 3px solid var(--primary);
     border-radius: 8px;
-    width: 150px;
-    min-height: 40vh;
+    width: 260px;
+    height: 32vh;
+}
+.book-name{
+    margin: 1rem 1rem;
+}
+.info-p{
+    margin: 1rem 1rem;
+}
+.close-button-card{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--red);
+}
+.close-button-card:hover{
+    cursor: pointer;
+}
+.book-design > .read-button{
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    border: 2px solid var(--primary);
+    border-radius: 8px;
+    height: 2.6rem;
+    width: 8rem;
+    background-color: var(--white);
+}
+.book-design > .read-button:hover{
+   cursor: pointer;
 }
