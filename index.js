@@ -114,7 +114,7 @@ function displayAllBook(){
     closeButtonCard.classList.add("close-button-card");
 
     //close button svg in book card
-    closeButtonCard.src = "/svg/close.svg";
+    closeButtonCard.src = "./svg/close.svg";
 
     //display the text in the element
     bookNameHeader.innerText = myLibrary[i]["bookName"];
