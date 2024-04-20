@@ -35,12 +35,22 @@ closeButton.addEventListener("click", (e) => {
   dialog.close();
 });
 
-//object constructor
-function Book(bookName, bookAuthor, bookPage, bookRead) {
-  this.bookName = bookName;
-  this.bookAuthor = bookAuthor;
-  this.bookPage = bookPage;
-  this.bookRead = bookRead;
+//object constructor in The Odin Project Object lesson
+// function Book(bookName, bookAuthor, bookPage, bookRead) {
+//   this.bookName = bookName;
+//   this.bookAuthor = bookAuthor;
+//   this.bookPage = bookPage;
+//   this.bookRead = bookRead;
+// }
+
+//class book in The Odin Project Class Lesson
+class Book{
+  constructor(bookName, bookAuthor, bookPage, bookRead){
+    this.bookName = bookName;
+    this.bookAuthor = bookAuthor;
+    this.bookPage = bookPage;
+    this.bookRead = bookRead;
+  }
 }
 
 //make 3 object
