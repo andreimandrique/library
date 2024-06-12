@@ -44,8 +44,8 @@ closeButton.addEventListener("click", (e) => {
 // }
 
 //class book in The Odin Project Class Lesson
-class Book{
-  constructor(bookName, bookAuthor, bookPage, bookRead){
+class Book {
+  constructor(bookName, bookAuthor, bookPage, bookRead) {
     this.bookName = bookName;
     this.bookAuthor = bookAuthor;
     this.bookPage = bookPage;
@@ -63,7 +63,7 @@ const book1 = new Book(
 const book2 = new Book("The Rain in España", "Gwy Saludes", 40, false);
 const book3 = new Book("The Alchemist", "Paulo Coelho", 208, true);
 
-//make an empty array 
+//make an empty array
 const myLibrary = [];
 
 //make a function that push the object to the myLibrary array
@@ -83,8 +83,7 @@ addButton.addEventListener("click", (e) => {
   //check if the input is empty
   if (bookName.value == "" || bookAuthor.value == "" || bookPage.value == "") {
     console.log("Empty book name or book author or book pages");
-  }
-  else{
+  } else {
     //if input is not empty make the value of the input as a object
     const myBook = new Book(
       bookName.value,
@@ -107,8 +106,7 @@ addButton.addEventListener("click", (e) => {
 displayAllBook();
 
 //function that display all book
-function displayAllBook(){
-
+function displayAllBook() {
   //loop all item in myLibrary array
   for (let i = 0; i <= myLibrary.length - 1; i++) {
     //make all element in the book container
